@@ -1,4 +1,4 @@
-export type IconKey = "cart" | "bus" | "house";
+export type IconKey = "cart" | "bus" | "house" | "food" | "entertainment";
 
 export type Expense = {
   id: number;
