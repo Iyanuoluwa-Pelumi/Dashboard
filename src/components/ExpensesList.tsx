@@ -103,21 +103,22 @@ const chart = [
 export default function ExpensesList() {
 
   return (
-    <div className="flex bg-[rgba(255,255,255,1)] items-center justify-around m-40 rounded-3xl h-screen  w-[90%] ">
-      <div className="flex w-lg justify-around h-screen items-center">
-        <div className="flex-1">
-          <div className="grid grid-cols-2 gap-6 items-center">
+    <div className=" flex flex-col md:flex md:flex-row bg-[rgba(255,255,255,1)] items-center gap-10 md:justify-around md:rounded-3xl md:w-[90%] ">
+      <div className="w-11/12 mx-auto mt-0 md:w-[90%] md:flex md:justify-center">
+        <div className="md:w-xl justify-center flex flex-col">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="flex flex-col gap-2">
               <h1 className="text-[rgba(38,42,65,1)] text-3xl font-bold">Expenses</h1>
               <p className="text-[rgba(16,16,16,1)] text-sm">01 - 25 March, 2020</p>
             </div>
 
-            <div className="flex justify-end -space-x-2">
+            <div className="flex justify-end">
               <Image
                 src="/Users.png"
                 alt="Users"
                 width={100}
                 height={100}
+                className="m-4 p-5"
               />
             </div>
 
@@ -134,17 +135,17 @@ export default function ExpensesList() {
 
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
-              <h3 className="text-[rgba(38,42,65,1)] font-[400px] text-lg">Today</h3>
+              <h3 className="text-[rgba(38,42,65,1)] font-normal text-lg">Today</h3>
               <Ellipsis className="text-[rgba(216,216,216,1)]"/>
             </div><hr />
 
-            <ul className="flex flex-col gap-6">
+            <ul className="flex flex-col gap-4">
               {expenses.map((e) => (
                 <React.Fragment key={e.id}>
                   {e.name === "Food" && (
                     <div className="flex flex-col gap-4">
                       <div className="flex justify-between items-center">
-                        <h3 className="text-[rgba(38,42,65,1)] font-[400px] text-lg tracking-wide">
+                        <h3 className="text-[rgba(38,42,65,1)] font-normal text-lg tracking-wide">
                         Monday, 23 March 2020
                         </h3>
                         <Ellipsis className="text-[rgba(216,216,216,1)]" />
@@ -152,7 +153,7 @@ export default function ExpensesList() {
                     </div>
                   )}
 
-                  <li className="flex items-center gap-6">
+                  <li className="flex items-center gap-5">
                     <div
                       className={`w-12 h-12 ${e.color} rounded-full flex items-center justify-center`}
                       >
@@ -177,10 +178,10 @@ export default function ExpensesList() {
       </div>
 
       {/* CHART */}
-      <div className=" flex flex-col justify-around h-screen bg-[rgba(249,250,252,1)]">
-        <div className="flex flex-col justify-around items-center gap-10 w-90">
+      <div className=" flex flex-col justify-evenly h-screen bg-[rgba(249,250,252,1)]">
+        <div className="flex flex-col items-center gap-10 w-screen md:w-90">
           <h3 className="items-center text-[rgba(38,42,65,1)] text-md">Where your money go?</h3>
-          <div className="w-70 items-center justify-center">
+          <div className="w-11/12 md:w-70 items-center justify-center">
             <div className="flex flex-col gap-6">
               {chart.map((c) => (
                 <div key={c.id}>
@@ -207,8 +208,8 @@ export default function ExpensesList() {
               width={250}
               height={292}
             />
-      </div>
+          </div>
+        </div>
     </div>
-  </div>
-)
+  )
 }
