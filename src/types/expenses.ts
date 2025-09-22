@@ -9,3 +9,5 @@ export type Expense = {
   icon: IconKey;
   color: string;
 };
+
+

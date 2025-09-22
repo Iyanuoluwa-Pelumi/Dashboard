@@ -178,7 +178,7 @@ export default function ExpensesList() {
       </div>
 
       {/* CHART */}
-      <div className=" flex flex-col justify-evenly h-screen bg-[rgba(249,250,252,1)]">
+      <div className=" flex flex-col justify-evenly md:h-screen bg-[rgba(249,250,252,1)]">
         <div className="flex flex-col items-center gap-10 w-screen md:w-90">
           <h3 className="items-center text-[rgba(38,42,65,1)] text-md">Where your money go?</h3>
           <div className="w-11/12 md:w-70 items-center justify-center">
