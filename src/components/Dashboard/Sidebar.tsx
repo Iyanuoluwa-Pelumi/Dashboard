@@ -50,7 +50,7 @@ export default function Sidebar() {
           <X className="w-8 h-8 text-white cursor-pointer" />
         </button>
 
-        <p className="absolute flex justify-center items-center right-21 top-14 md:right-22 md:top-18 z-30 rounded-full w-6 h-6 text-[rgba(255,255,255,1)] bg-[rgba(220,52,52,1)]">4</p>
+        <p className="absolute flex justify-center items-center right-21 top-14 md:right-22 md:top-14 lg:top-18 z-30 rounded-full w-6 h-6 text-[rgba(255,255,255,1)] bg-[rgba(220,52,52,1)]">4</p>
 
         {/* Profile section */}
         <div className="flex flex-col items-center gap-2 mt-10">
