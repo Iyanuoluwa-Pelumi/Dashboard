@@ -13,12 +13,27 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile menu icon */}
-      <button
-        className="md:hidden p-2 m-2"
-        onClick={() => setSidebar(!sidebar)}
-      >
-        <Menu className="w-8 h-8 text-white" />
-      </button>
+      
+      <div>
+      <div className="md:hidden fixed top-0 left-0 w-screen mx-auto my-0 shadow h-15  bg-gray-900 flex justify-between items-center">
+
+      <Menu className="w-8 h-8 text-white m-4 p-5 cursor-pointer"
+        onClick={() => setSidebar(!sidebar)}/>
+  
+
+      <Image
+        src='/Samantha.png'
+        alt="profile"
+        width={32}
+          height={32}
+          className="rounded-full"
+        />
+        </div>   
+      </div>
+
+
+
+
 
       {/* Sidebar */}
       <aside
@@ -32,8 +47,10 @@ export default function Sidebar() {
           className="absolute top-2 right-4 md:hidden"
           onClick={() => setSidebar(false)}
         >
-          <X className="w-8 h-8 text-white" />
+          <X className="w-8 h-8 text-white cursor-pointer" />
         </button>
+
+        <p className="absolute flex justify-center items-center right-21 top-14 md:right-22 md:top-18 z-30 rounded-full w-6 h-6 text-[rgba(255,255,255,1)] bg-[rgba(220,52,52,1)]">4</p>
 
         {/* Profile section */}
         <div className="flex flex-col items-center gap-2 mt-10">
